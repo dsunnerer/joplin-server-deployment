@@ -20,13 +20,13 @@ spec:
         image: joplin/server:2.4.1-beta
         env:
         - name: APP_BASE_URL
-          value: "https://your.hostname.com/"
+          value: "https://your.hostname.com"
         - name: APP_PORT
           value: "22300"
         - name: USER_CONTENT_BASE_URL
           value: ""
         - name: API_BASE_URL
-          value: "api"
+          value: ""
         - name: SQLITE_DATABASE
           value: "true"
         - name: POSTGRES_HOST

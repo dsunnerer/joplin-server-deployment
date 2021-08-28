@@ -26,7 +26,7 @@ spec:
         - name: USER_CONTENT_BASE_URL
           value: ""
         - name: API_BASE_URL
-          value: "api"
+          value: ""
         - name: SQLITE_DATABASE
           value: "true"
         - name: POSTGRES_HOST
