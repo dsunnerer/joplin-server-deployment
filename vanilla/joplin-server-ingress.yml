@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: joplin-ingress
+spec:
+  rules:
+  - host: your.hostname.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: joplin-https
+            port:
+              number: 22300
+        path: /
+        pathType: Prefix

@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    certmanager.k8s.io/acme-challenge-type: http01
+    certmanager.k8s.io/cluster-issuer: buypass
+  name: joplin-ingress
+spec:
+  rules:
+  - host: your.hostname.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: joplin-https
+            port:
+              number: 22300
+        path: /
+        pathType: Prefix

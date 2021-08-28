@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: joplin-server
+spec:
+  secretName: joplin-tls
+  duration: 4320h
+  renewBefore: 336h
+  commonName: your.hostname.com
+  dnsNames:
+  - your.hostname.com
+  issuerRef:
+    name: your_acme_provider
+    kind: ClusterIssuer
